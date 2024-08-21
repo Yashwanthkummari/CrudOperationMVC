@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Employee Information</h1>
+<button type="button" class="btn btn-primary mb-4" id="addEmployee" >
+    Add Employee
+</button>
+<div class="container">
+    <div class="table-responsive">
+        <table id="" class="table   table-bordered">
+            <thead class=" table table-primary">
+                <tr>
+                    <th>Name</th>
+                    <th>PhoneNumber</th>
+                    <th>Email</th>
+                    <th>State</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="table-data">
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="modal fade modal " id="employeeModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="AddddEmployee">Add Employee</h5>
+                <h5 class="modal-title" id="EditttEmployee">Edit Employee</h5>
+                <button  onclick="closeEmployeeModel()" data-dismiss="modal">
+                    &times;
+        </button>
+      </div>
+      <div class="modal-body">
+          <form action="/" method="post">
+                    <div id="employeid"  class="form-group">
+                        <label class="control-label">Id</label>
+                        <input type="text" id="employeeId" class="form-control" disabled="disabled" />
+                        @* <span class="text-danger"></span> *@
+                    </div>
+                     <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input type="text" placeholder="Name" class="form-control" id="name" />
+                        @* <span class="text-danger"></span> *@
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">PhoneNumber</label>
+                        <input type="text" placeholder="PhoneNumber" class="form-control" id="phone" />
+                        @* <span class="text-danger"></span> *@
+                    </div>
+                     <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input type="text" placeholder="Email" class="form-control" id="email" />
+                        @* <span class="text-danger"></span> *@
+                    </div>
+                     <div class="form-group">
+                        <label class="control-label">Password</label>
+                        <input type="text" placeholder="Password" class="form-control" id="pass" />
+                        @* <span class="text-danger"></span> *@
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">State</label>
+                        <input type="text" placeholder="State" class="form-control" id="state" />
+                        @* <span class="text-danger"></span> *@
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">City</label>
+                        <input type="text" placeholder="City" class="form-control" id="city" />
+                        @* <span class="text-danger"></span> *@
+                    </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+                <button class="btn btn-secondary " onclick="closeEmployeeModel()" data-dismiss="employeeModal">Close</button>
+                <button class="btn btn-primary" onclick="AddEmployee()" id="AddEmployee">Save </button>
+                <button class="btn btn-primary" onclick="updateEmployeeData()" id="EditEmployee">Save Changes </button>
+            </div>
+    </div>
+  </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/employeecrud.js"></script>
+
